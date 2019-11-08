@@ -63,6 +63,7 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.spam = Spam
 master.menu.administrator.dashboard = Panel de estadísticas
+master.menu.administrator.challenge = Listar retos
 master.menu.administrator.charts = Gráficas de estadísticas
 
 # master.menu.provider ########################################################
