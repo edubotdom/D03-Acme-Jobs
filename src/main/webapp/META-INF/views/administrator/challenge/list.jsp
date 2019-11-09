@@ -20,8 +20,3 @@
 	<acme:list-column code="administrator.challenge.list.label.title" path="title" width="40%"/>
 	<acme:list-column code="administrator.challenge.list.label.deadline" path="deadline" width="20%"/>	
 </acme:list>
-
-<acme:form readonly="true">
-<acme:form-submit code="administrator.challenge.form.button.create"
-		action="/administrator/challenge/create" />	
-</acme:form>
