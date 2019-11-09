@@ -64,9 +64,11 @@
 			<acme:menu-suboption code="master.menu.administrator.spam" action="/administrator/spam/list" access="hasRole('Administrator')"/>
 			<!-- Dashboard -->
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show" access="hasRole('Administrator')"/>
+			<!--Challenge-->
+			<acme:menu-suboption code="master.menu.administrator.challenge" action="/administrator/challenge/list" access="hasRole('Administrator')"/>	
 			<!--Company records-->
 			<acme:menu-suboption code="master.menu.administrator.companies" action="/administrator/company/list" access="hasRole('Administrator')"/>
-			
+
 		</acme:menu-option>
     
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
