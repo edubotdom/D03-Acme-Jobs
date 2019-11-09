@@ -65,6 +65,7 @@ master.menu.administrator.spam = Spam
 master.menu.administrator.dashboard = Panel de estadísticas
 master.menu.administrator.challenge = Listar retos
 master.menu.administrator.charts = Gráficas de estadísticas
+master.menu.administrator.companies = Registro de empresas
 
 # master.menu.provider ########################################################
 
