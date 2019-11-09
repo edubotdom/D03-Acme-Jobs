@@ -64,6 +64,7 @@ master.menu.administrator.shutdown = Shut down
 master.menu.administrator.spam = Spam
 master.menu.administrator.dashboard = Dashboard panel
 master.menu.administrator.charts = Administration charts
+master.menu.administrator.companies = Company records
 
 # master.menu.provider ########################################################
 
