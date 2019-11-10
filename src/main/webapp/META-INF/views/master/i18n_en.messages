@@ -66,6 +66,7 @@ master.menu.administrator.dashboard = Dashboard panel
 master.menu.administrator.challenge = List challenges
 master.menu.administrator.charts = Administration charts
 master.menu.administrator.companies = Company records
+master.menu.administrator.investor = Investor Records
 
 # master.menu.provider ########################################################
 
