@@ -68,6 +68,8 @@
 			<acme:menu-suboption code="master.menu.administrator.challenge" action="/administrator/challenge/list" access="hasRole('Administrator')"/>	
 			<!--Company records-->
 			<acme:menu-suboption code="master.menu.administrator.companies" action="/administrator/company/list" access="hasRole('Administrator')"/>
+			<!-- Investor records -->
+			<acme:menu-suboption code="master.menu.administrator.investor" action="/administrator/investor/list" access="hasRole('Administrator')"/>
 
 		</acme:menu-option>
     
