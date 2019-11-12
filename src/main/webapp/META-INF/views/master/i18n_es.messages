@@ -58,15 +58,19 @@ master.menu.authenticated.investor = Registros de inversores
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
-master.menu.administrator.announcements = Anuncios de admin
+master.menu.administrator.list_announcements = Listar anuncios de admin
+master.menu.administrator.create_announcements = Crear un anuncio de admin
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.spam = Spam
 master.menu.administrator.dashboard = Panel de estadísticas
-master.menu.administrator.challenge = Listar retos
+master.menu.administrator.list_challenge = Listar retos
+master.menu.administrator.create_challenge = Crear un reto
 master.menu.administrator.charts = Gráficas de estadísticas
-master.menu.administrator.companies = Registro de empresas
-master.menu.administrator.investor = Registro de Inversores
+master.menu.administrator.list_companies = Listar registro de empresas
+master.menu.administrator.create_companies = Crear un registro de empresas
+master.menu.administrator.list_investor = Listar registro de Inversores
+master.menu.administrator.create_investor = Crear un registro de Inversores
 
 # master.menu.provider ########################################################
 
