@@ -58,15 +58,19 @@ master.menu.authenticated.investor = Investor records
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
-master.menu.administrator.announcements = Admin announcements
+master.menu.administrator.list_announcements = List admin announcements
+master.menu.administrator.create_announcements = Create an admin announcements
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.spam = Spam
 master.menu.administrator.dashboard = Dashboard panel
-master.menu.administrator.challenge = List challenges
+master.menu.administrator.list_challenge = List challenges
+master.menu.administrator.create_challenge = Create a challenge
 master.menu.administrator.charts = Administration charts
-master.menu.administrator.companies = Company records
-master.menu.administrator.investor = Investor Records
+master.menu.administrator.list_companies = List company records
+master.menu.administrator.create_companies = Create a company records
+master.menu.administrator.list_investor = List investor records
+master.menu.administrator.create_investor = Create a investor Records
 
 # master.menu.provider ########################################################
 
