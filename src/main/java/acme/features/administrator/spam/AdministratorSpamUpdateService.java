@@ -15,7 +15,7 @@ import acme.framework.services.AbstractUpdateService;
 public class AdministratorSpamUpdateService implements AbstractUpdateService<Administrator, Spam> {
 
 	@Autowired
-	private AdministratorSpamRepository repository;
+	AdministratorSpamRepository repository;
 
 
 	@Override
@@ -30,8 +30,7 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-
-		request.bind(request, errors);
+		request.bind(entity, errors);
 
 	}
 
