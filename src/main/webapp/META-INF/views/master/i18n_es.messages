@@ -71,6 +71,8 @@ master.menu.administrator.list_companies = Listar registro de empresas
 master.menu.administrator.create_companies = Crear un registro de empresas
 master.menu.administrator.list_investor = Listar registro de Inversores
 master.menu.administrator.create_investor = Crear un registro de Inversores
+master.menu.administrator.list_commercialBanner = Listar banner comercial
+master.menu.administrator.create_commercialBanner = Crear banner comercial
 
 # master.menu.provider ########################################################
 
