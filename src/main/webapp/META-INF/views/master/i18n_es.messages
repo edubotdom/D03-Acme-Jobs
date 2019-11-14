@@ -30,6 +30,7 @@ master.menu.sign-out = Salir
 master.menu.selector.anonymous = Selector de Anónimo
 master.menu.selector.authenticated = Selector de Autenticado
 master.menu.selector.administrator = Selector de Administrador
+master.menu.selector.consumer = Selector de Consumer
 
 # master.menu.anonymous #######################################################
 
@@ -85,6 +86,7 @@ master.menu.provider.favourite-link = Enlace favorito
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
+master.menu.consumer.offer = Listar ofertas
 
 # master.menu.user-account ####################################################
 

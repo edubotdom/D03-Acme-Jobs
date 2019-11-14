@@ -89,14 +89,19 @@
 				access="hasRole('Administrator')" />
 			<acme:menu-suboption code="master.menu.administrator.create_commercialBanner" action="/administrator/commercial-banner/create"
 				access="hasRole('Administrator')" />
-				<!-- Non-Commercial Banner -->
+			<!-- Non-Commercial Banner -->
 			<acme:menu-suboption code="master.menu.administrator.list_nonCommercialBanner" action="/administrator/non-commercial-banner/list"
 				access="hasRole('Administrator')" />
-			<acme:menu-suboption code="master.menu.administrator.create_nonCommercialBanner" action="/administrator/non-commercial-banner/create"
-				access="hasRole('Administrator')" />
-
-
+			<acme:menu-suboption code="master.menu.administrator.create_nonCommercialBanner"
+				action="/administrator/non-commercial-banner/create" access="hasRole('Administrator')" />
 		</acme:menu-option>
+		
+		<!--Consumer's Selector-->
+		<acme:menu-option code="master.menu.selector.consumer" access="hasRole('Consumer')">
+			<acme:menu-suboption code="master.menu.consumer.offer" action="/consumer/offer/list" access="hasRole('Consumer')" />
+		</acme:menu-option>
+		
+		
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list" />
@@ -108,9 +113,7 @@
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/" />
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/" />
-		</acme:menu-option>
+		 
 	</acme:menu-left>
 
 	<acme:menu-right>
