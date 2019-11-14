@@ -109,8 +109,12 @@
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown" />
 		</acme:menu-option>
 
+
+		<!--Provider's Selector-->
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/" />
+			<acme:menu-suboption code="master.menu.provider.list_solicitud" action="/provider/solicitud/list" />
+			<acme:menu-suboption code="master.menu.provider.create_solicitud" action="/provider/solicitud/create" />
 		</acme:menu-option>
 
 		 

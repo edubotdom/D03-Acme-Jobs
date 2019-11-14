@@ -1,0 +1,28 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.solicitud.form.label.ticker = Código:
+authenticated.solicitud.form.label.title = Título:
+authenticated.solicitud.form.label.moment = Fecha y hora:
+authenticated.solicitud.form.label.deadline = Fecha límite:
+authenticated.solicitud.form.label.text = Descripcion:
+authenticated.solicitud.form.label.reward = Recompensa:
+authenticated.solicitud.form.button.return = Volver
+
+authenticated.solicitud.list.label.moment = Fecha y hora
+authenticated.solicitud.list.label.title = Título
+authenticated.solicitud.list.label.deadline = Fecha límite
+authenticated.solicitud.list.label.reward = Recompensa
+
+provider.solicitud.form.label.accept = Confirmar
+provider.solicitud.form.button.create = Crear
+provider.solicitud.must-be-different-ticker = No debe coincidir con otro ticker anterior
+provider.solicitud.must-accept = Debe ser confirmado
+provider.solicitud.must-be-at-least-ten-days-future-deadline = Debe de estar al menos 10 días en el futuro

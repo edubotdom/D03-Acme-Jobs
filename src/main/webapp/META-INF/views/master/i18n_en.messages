@@ -81,6 +81,8 @@ master.menu.administrator.create_nonCommercialBanner = Create non-commercial ban
 
 master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
+master.menu.provider.list_solicitud = List Requests
+master.menu.provider.create_solicitud = Create Request
 
 # master.menu.consumer ##########################################################
 
