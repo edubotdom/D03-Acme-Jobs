@@ -71,6 +71,10 @@ master.menu.administrator.list_companies = List company records
 master.menu.administrator.create_companies = Create a company records
 master.menu.administrator.list_investor = List investor records
 master.menu.administrator.create_investor = Create a investor Records
+master.menu.administrator.list_commercialBanner = List commercial banner 
+master.menu.administrator.create_commercialBanner = Create commercial banner
+master.menu.administrator.list_nonCommercialBanner = List non-commercial banner 
+master.menu.administrator.create_nonCommercialBanner = Create non-commercial banner
 
 # master.menu.provider ########################################################
 

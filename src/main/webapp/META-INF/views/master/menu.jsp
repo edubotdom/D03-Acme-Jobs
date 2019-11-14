@@ -84,6 +84,17 @@
 				access="hasRole('Administrator')" />
 			<acme:menu-suboption code="master.menu.administrator.create_investor" action="/administrator/investor/create"
 				access="hasRole('Administrator')" />
+			<!-- Commercial Banner -->
+			<acme:menu-suboption code="master.menu.administrator.list_commercialBanner" action="/administrator/commercial-banner/list"
+				access="hasRole('Administrator')" />
+			<acme:menu-suboption code="master.menu.administrator.create_commercialBanner" action="/administrator/commercial-banner/create"
+				access="hasRole('Administrator')" />
+				<!-- Non-Commercial Banner -->
+			<acme:menu-suboption code="master.menu.administrator.list_nonCommercialBanner" action="/administrator/non-commercial-banner/list"
+				access="hasRole('Administrator')" />
+			<acme:menu-suboption code="master.menu.administrator.create_nonCommercialBanner" action="/administrator/non-commercial-banner/create"
+				access="hasRole('Administrator')" />
+
 
 		</acme:menu-option>
 
