@@ -11,3 +11,9 @@
 administrator.spam.list.label.spamWords = Palabras Spam
 administrator.spam.list.label.spamThreshold = Límite de Spam
 administrator.spam.list.label.lang = Idioma
+
+administrator.spam.form.label.spamWords = Palabras Spam
+administrator.spam.form.label.spamThreshold = Límite de Spam
+administrator.spam.form.label.lang = Idioma
+administrator.spam.form.button.update = Actualizar
+administrator.spam.form.button.return = Volver

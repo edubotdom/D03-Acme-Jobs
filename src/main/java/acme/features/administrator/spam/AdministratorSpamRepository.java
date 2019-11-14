@@ -15,4 +15,7 @@ public interface AdministratorSpamRepository extends AbstractRepository {
 	@Query("select s from Spam s")
 	Collection<Spam> findMany();
 
+	@Query("select i from Spam i where i.id = ?1")
+	Spam findOneById(int id);
+
 }
