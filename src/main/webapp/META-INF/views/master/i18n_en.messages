@@ -86,7 +86,7 @@ master.menu.provider.favourite-link = Favourite link
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
-master.menu.consumer.offer = List offers
+master.menu.consumer.create_offer = Create an offer
 
 
 # master.menu.user-account ####################################################

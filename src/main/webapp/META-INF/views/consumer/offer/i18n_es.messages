@@ -15,8 +15,8 @@ consumer.offer.form.label.deadline = Fecha límite:
 consumer.offer.form.label.text = Descripcion:
 consumer.offer.form.label.min = Recompensa mínima:
 consumer.offer.form.label.max = Recompensa máxima:
+consumer.offer.form.button.create = Crear
 consumer.offer.form.button.return = Volver
-
-consumer.offer.list.label.moment = Fecha y hora
-consumer.offer.list.label.title = Título
-consumer.offer.list.label.deadline = Fecha límite
+consumer.offer.form.label.accept = Confirmar
+consumer.offer.must-accept = Debe ser confirmado
+consumer.offer.must-be-different-ticker = No debe coincidir con otro ticker anterior

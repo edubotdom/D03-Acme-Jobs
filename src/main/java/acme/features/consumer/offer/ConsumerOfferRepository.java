@@ -29,4 +29,7 @@ public interface ConsumerOfferRepository extends AbstractRepository {
 	@Query("select ac from Offer ac where ac.deadline >= current_date()")
 	Collection<Offer> findManyAll();
 
+	@Query("select t from Offer t where t.ticker = ?1")
+	Offer findOneByTicker(String ticker);
+
 }
