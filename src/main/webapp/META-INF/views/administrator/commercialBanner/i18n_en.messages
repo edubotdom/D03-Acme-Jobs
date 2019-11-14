@@ -18,6 +18,5 @@ administrator.commercialBanner.form.button.update = Update
 administrator.commercialBanner.form.button.delete = Delete
 administrator.commercialBanner.form.button.create = Create
 
-administrator.commercialBanner.list.label.picture = Picture:
 administrator.commercialBanner.list.label.slogan = Slogan:
 administrator.commercialBanner.list.label.url = URL:

@@ -73,6 +73,8 @@ master.menu.administrator.list_investor = Listar registro de Inversores
 master.menu.administrator.create_investor = Crear un registro de Inversores
 master.menu.administrator.list_commercialBanner = Listar banner comercial
 master.menu.administrator.create_commercialBanner = Crear banner comercial
+master.menu.administrator.list_nonCommercialBanner = Listar banner no comercial
+master.menu.administrator.create_nonCommercialBanner = Crear banner no comercial
 
 # master.menu.provider ########################################################
 
