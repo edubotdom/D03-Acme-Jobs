@@ -81,6 +81,8 @@ master.menu.administrator.create_nonCommercialBanner = Crear banner no comercial
 
 master.menu.provider = Proveedor
 master.menu.provider.favourite-link = Enlace favorito
+master.menu.provider.list_solicitud = Listar Solicitudes
+master.menu.provider.create_solicitud = Crear Solicitud
 
 # master.menu.consumer ##########################################################
 
