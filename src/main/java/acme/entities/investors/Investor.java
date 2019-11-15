@@ -2,6 +2,8 @@
 package acme.entities.investors;
 
 import javax.persistence.Entity;
+import javax.persistence.Index;
+import javax.persistence.Table;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 
@@ -14,6 +16,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(indexes = {
+	@Index(columnList = "stars")
+})
 public class Investor extends DomainEntity {
 
 	// Serialisation identifier
