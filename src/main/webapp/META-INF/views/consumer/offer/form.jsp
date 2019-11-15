@@ -20,8 +20,8 @@
 	<acme:form-textbox code="consumer.offer.form.label.title" path="title"/>
 	<acme:form-moment code="consumer.offer.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="consumer.offer.form.label.text" path="text"/>
-	<acme:form-double code="consumer.offer.form.label.min" path="min"/>
-	<acme:form-double code="consumer.offer.form.label.max" path="max"/>
+	<acme:form-money code="consumer.offer.form.label.min" path="min"/>
+	<acme:form-money code="consumer.offer.form.label.max" path="max"/>
 	
 	<acme:form-checkbox code="consumer.offer.form.label.accept" path="accept"/>
 	

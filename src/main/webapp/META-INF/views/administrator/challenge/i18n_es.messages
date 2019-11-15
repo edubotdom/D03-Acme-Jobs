@@ -28,3 +28,9 @@ administrator.challenge.form.label.goldLevel = Nivel oro
 
 administrator.challenge.list.label.title = Título
 administrator.challenge.list.label.deadline = Fecha límite
+
+administrator.challenge.incorrect-date = Fecha introducida anterior a la actual.
+administrator.challenge.incorrect-currency = La unidad monetaria deben ser EUR.
+administrator.challenge.must-be-filled = Debe ser rellenado
+administrator.challenge.gold-greater-silver = Recompensa Oro debe ser mayor que Plata
+administrator.challenge.silver-greater-bronze = Recompensa Plata debe ser mayor que Bronce

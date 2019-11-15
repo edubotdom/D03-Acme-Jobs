@@ -28,3 +28,9 @@ administrator.challenge.form.label.goldLevel = Gold level
 
 administrator.challenge.list.label.title = Title
 administrator.challenge.list.label.deadline = Deadline
+administrator.challenge.gold-greater-silver = Gold reward must be higher than silver
+administrator.challenge.silver-greater-bronze = Silver reward must be higher than bronze
+
+administrator.challenge.incorrect-date = Deadline is set before actual date
+administrator.challenge.incorrect-currency = Currency must be EUR
+administrator.challenge.incorrect-currency = Must be filled
