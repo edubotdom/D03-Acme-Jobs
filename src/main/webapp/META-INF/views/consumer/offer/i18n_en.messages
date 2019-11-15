@@ -25,3 +25,4 @@ consumer.offer.correct-range = Range minimum is greater than the maximum
 consumer.offer.correct-currency = Currency is not EUR
 consumer.offer.negative-reward = Reward cannot be negative
 consumer.offer.must-be-filled = Must be filled
+consumer.offer.must-be-filled-accordingly = Must be filled accordingly to a money pattern

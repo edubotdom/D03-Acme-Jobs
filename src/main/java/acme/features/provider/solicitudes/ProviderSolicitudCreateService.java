@@ -101,7 +101,7 @@ public class ProviderSolicitudCreateService implements AbstractCreateService<Pro
 			errors.state(request, isCurrencyEuro, "reward", "provider.solicitud.correct-currency");
 			errors.state(request, isRewardNegative, "reward", "provider.solicitud.negative-reward");
 		} else {
-			errors.state(request, false, "reward", "provider.solicitud.must-be-filled");
+			errors.state(request, false, "reward", "provider.solicitud.must-be-filled-accordingly");
 		}
 
 	}

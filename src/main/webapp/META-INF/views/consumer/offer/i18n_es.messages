@@ -25,3 +25,4 @@ consumer.offer.correct-range = El mínimo del rango es superior al máximo
 consumer.offer.correct-currency = La unidad monetaria no es EUR
 consumer.offer.negative-reward = La recompensa no puede ser negativa
 consumer.offer.must-be-filled = Debe rellenarse
+consumer.offer.must-be-filled-accordingly = Debe rellenarse de acuerdo al formato monetario

@@ -29,3 +29,4 @@ provider.solicitud.must-be-at-least-ten-days-future-deadline = Must be at least 
 provider.solicitud.correct-currency = Currency must be EUR
 provider.solicitud.negative-reward = Reward must be positive
 provider.solicitud.must-be-filled = Must be filled
+provider.solicitud.must-be-filled-accordingly = Must be filled accordingly to a money pattern

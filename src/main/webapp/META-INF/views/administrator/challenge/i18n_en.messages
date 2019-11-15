@@ -33,4 +33,6 @@ administrator.challenge.silver-greater-bronze = Silver reward must be higher tha
 
 administrator.challenge.incorrect-date = Deadline is set before actual date
 administrator.challenge.incorrect-currency = Currency must be EUR
-administrator.challenge.incorrect-currency = Must be filled
+administrator.challenge.must-be-filled = Must be filled
+
+administrator.challenge.must-be-filled-accordingly = Must be filled accordingly to money pattern 
