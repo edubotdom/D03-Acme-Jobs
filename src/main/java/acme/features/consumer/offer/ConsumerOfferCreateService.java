@@ -1,7 +1,9 @@
 
 package acme.features.consumer.offer;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -66,13 +68,56 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert errors != null;
 
-		boolean isDuplicated, isAccepted;
+		boolean isDuplicated, isAccepted, isInRange, isMinCurrencyEuro, isMaxCurrencyEuro, isMinNegative, isMaxNegative;
 
+		// BUSCA DUPLICADOS
 		isDuplicated = this.repository.findOneByTicker(entity.getTicker()) != null;
 		errors.state(request, !isDuplicated, "ticker", "consumer.offer.must-be-different-ticker");
 
+		// BUSCA QUE EL CHECKBOX SE HAYA SELECCIONADO
 		isAccepted = request.getModel().getBoolean("accept");
 		errors.state(request, isAccepted, "accept", "consumer.offer.must-accept");
+
+		// BUSCA QUE LA FECHA SEA FUTURA
+		Calendar calendar;
+		Date minimumDeadline;
+
+		if (entity.getDeadline() != null && !errors.hasErrors("deadline")) {
+			calendar = new GregorianCalendar();
+			calendar.add(Calendar.DAY_OF_MONTH, 10);		// debe establecerse al menos 10 días desde el momento actual
+			minimumDeadline = calendar.getTime();
+			errors.state(request, entity.getDeadline().after(minimumDeadline), "deadline", "consumer.offer.must-be-at-least-ten-days-future-deadline");
+		} else if (entity.getDeadline() == null) {
+			errors.state(request, false, "deadline", "consumer.offer.must-be-filled");
+		}
+
+		// CANTIDAD MÁXIMA DE RANGE SUPERIOR A LA INFERIOR
+		if (entity.getMin() != null && entity.getMax() != null) {
+			isInRange = entity.getMin().getAmount() <= entity.getMax().getAmount();
+			errors.state(request, isInRange, "max", "consumer.offer.correct-range");
+			errors.state(request, isInRange, "min", "consumer.offer.correct-range");
+		}
+
+		// CURRENCY -> EUR
+		if (entity.getMin() != null) {
+			isMinCurrencyEuro = entity.getMin().getCurrency().equals("EUR") || entity.getMin().getCurrency().equals("€");
+			isMinNegative = entity.getMin().getAmount().compareTo(0.) >= 0;
+			errors.state(request, isMinCurrencyEuro, "min", "consumer.offer.correct-currency");
+			errors.state(request, isMinNegative, "min", "consumer.offer.negative-reward");
+		} else {
+			errors.state(request, false, "min", "consumer.offer.must-be-filled");
+		}
+
+		if (entity.getMax() != null) {
+			// CURRENCY -> EUR
+			isMaxCurrencyEuro = entity.getMax().getCurrency().equals("EUR") || entity.getMax().getCurrency().equals("€");
+			isMaxNegative = entity.getMax().getAmount().compareTo(0.) >= 0;
+			errors.state(request, isMaxCurrencyEuro, "max", "consumer.offer.correct-currency");
+			errors.state(request, isMaxNegative, "max", "consumer.offer.negative-reward");
+		} else {
+			errors.state(request, false, "max", "consumer.offer.must-be-filled");
+		}
+
 	}
 
 	@Override

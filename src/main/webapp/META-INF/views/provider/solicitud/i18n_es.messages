@@ -26,3 +26,6 @@ provider.solicitud.form.button.create = Crear
 provider.solicitud.must-be-different-ticker = No debe coincidir con otro ticker anterior
 provider.solicitud.must-accept = Debe ser confirmado
 provider.solicitud.must-be-at-least-ten-days-future-deadline = Debe de estar al menos 10 días en el futuro
+provider.solicitud.correct-currency = La unidad de moneda deben de ser EUR
+provider.solicitud.negative-reward = La recompensa debe ser positiva
+provider.solicitud.must-be-filled = Debe de completarse

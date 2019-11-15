@@ -20,7 +20,7 @@
 	<acme:form-textbox code="provider.solicitud.form.label.title" path="title"/>
 	<acme:form-moment code="provider.solicitud.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="provider.solicitud.form.label.text" path="text"/>
-	<acme:form-double code="provider.solicitud.form.label.reward" path="reward"/>
+	<acme:form-money code="provider.solicitud.form.label.reward" path="reward"/>
 	
 	<acme:form-checkbox code="provider.solicitud.form.label.accept" path="accept"/>
 	
