@@ -105,7 +105,7 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 			errors.state(request, isMinCurrencyEuro, "min", "consumer.offer.correct-currency");
 			errors.state(request, isMinNegative, "min", "consumer.offer.negative-reward");
 		} else {
-			errors.state(request, false, "min", "consumer.offer.must-be-filled");
+			errors.state(request, false, "min", "consumer.offer.must-be-filled-accordingly");
 		}
 
 		if (entity.getMax() != null) {
@@ -115,7 +115,7 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 			errors.state(request, isMaxCurrencyEuro, "max", "consumer.offer.correct-currency");
 			errors.state(request, isMaxNegative, "max", "consumer.offer.negative-reward");
 		} else {
-			errors.state(request, false, "max", "consumer.offer.must-be-filled");
+			errors.state(request, false, "max", "consumer.offer.must-be-filled-accordingly");
 		}
 
 	}

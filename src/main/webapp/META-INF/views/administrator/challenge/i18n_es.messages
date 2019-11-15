@@ -29,6 +29,8 @@ administrator.challenge.form.label.goldLevel = Nivel oro
 administrator.challenge.list.label.title = Título
 administrator.challenge.list.label.deadline = Fecha límite
 
+administrator.challenge.must-be-filled-accordingly= Debe ser rellenado de acuerdo al patrón del dinero.
+
 administrator.challenge.incorrect-date = Fecha introducida anterior a la actual.
 administrator.challenge.incorrect-currency = La unidad monetaria deben ser EUR.
 administrator.challenge.must-be-filled = Debe ser rellenado

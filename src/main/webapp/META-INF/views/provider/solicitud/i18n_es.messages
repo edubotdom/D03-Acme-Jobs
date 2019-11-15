@@ -29,3 +29,4 @@ provider.solicitud.must-be-at-least-ten-days-future-deadline = Debe de estar al 
 provider.solicitud.correct-currency = La unidad de moneda deben de ser EUR
 provider.solicitud.negative-reward = La recompensa debe ser positiva
 provider.solicitud.must-be-filled = Debe de completarse
+provider.solicitud.must-be-filled-accordingly = Debe rellenarse de acuerdo al formato monetario

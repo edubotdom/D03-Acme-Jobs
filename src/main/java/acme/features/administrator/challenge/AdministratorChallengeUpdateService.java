@@ -83,7 +83,7 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 			isGoldRewardEuro = entity.getGoldReward().getCurrency().equals("EUR") || entity.getGoldReward().getCurrency().equals("€");
 			errors.state(request, isGoldRewardEuro, "goldReward", "administrator.challenges.incorrect-currency");
 		} else {
-			errors.state(request, false, "goldReward", "administrator.challenge.must-be-filled");
+			errors.state(request, false, "goldReward", "administrator.challenge.must-be-filled-accordingly");
 		}
 
 		if (entity.getBronzeReward() != null) {
@@ -91,7 +91,7 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 			isBronzeRewardEuro = entity.getBronzeReward().getCurrency().equals("EUR") || entity.getBronzeReward().getCurrency().equals("€");
 			errors.state(request, isBronzeRewardEuro, "bronzeReward", "administrator.challenges.incorrect-currency");
 		} else {
-			errors.state(request, false, "bronzeReward", "administrator.challenge.must-be-filled");
+			errors.state(request, false, "bronzeReward", "administrator.challenge.must-be-filled-accordingly");
 		}
 
 		if (entity.getSilverReward() != null) {
@@ -99,17 +99,17 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 			isSilverRewardEuro = entity.getSilverReward().getCurrency().equals("EUR") || entity.getSilverReward().getCurrency().equals("€");
 			errors.state(request, isSilverRewardEuro, "silverReward", "administrator.challenges.incorrect-currency");
 		} else {
-			errors.state(request, false, "silverReward", "administrator.challenge.must-be-filled");
+			errors.state(request, false, "silverReward", "administrator.challenge.must-be-filled-accordingly");
 		}
 
 		//ADECUATED REWARDS
-		if (entity.getGoldReward() != null || entity.getSilverReward() != null) {
+		if (entity.getGoldReward() != null && entity.getSilverReward() != null) {
 			isGoldGreaterSilver = entity.getGoldReward().getAmount() > entity.getSilverReward().getAmount();
 			errors.state(request, isGoldGreaterSilver, "goldReward", "administrator.challenge.gold-greater-silver");
 		}
 
 		//ADECUATED REWARDS
-		if (entity.getBronzeReward() != null || entity.getSilverReward() != null) {
+		if (entity.getBronzeReward() != null && entity.getSilverReward() != null) {
 			isSilverGreaterBronze = entity.getSilverReward().getAmount() > entity.getBronzeReward().getAmount();
 			errors.state(request, isSilverGreaterBronze, "silverReward", "administrator.challenge.silver-greater-bronze");
 		}
