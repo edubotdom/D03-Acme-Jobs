@@ -17,6 +17,29 @@
 
 	<import resource="conversion-service.xml" />
 
+	<!-- Authenticated Users -->
+	
+	<bean name="authenticatedUserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="authenticated" />
+		<property name="password" value="authenticated" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Authenticated" />
+				<property name="surname" value="User" />
+				<property name="email" value="authenticated@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="authenticatedAuthenticated" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="authenticatedAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="authenticatedUserAccount" />
+	</bean>
 
 	<!-- SHOUT'S BEANS -->
 

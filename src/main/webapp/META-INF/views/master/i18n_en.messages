@@ -31,6 +31,7 @@ master.menu.selector.anonymous = Anonymous's Selector
 master.menu.selector.authenticated = Authenticated's Selector 
 master.menu.selector.administrator = Administrator's Selector
 master.menu.selector.consumer = Consumer's Selector
+master.menu.selector.provider = Provider's Selector
 
 # master.menu.anonymous #######################################################
 
@@ -71,7 +72,7 @@ master.menu.administrator.charts = Administration charts
 master.menu.administrator.list_companies = List company records
 master.menu.administrator.create_companies = Create a company records
 master.menu.administrator.list_investor = List investor records
-master.menu.administrator.create_investor = Create a investor Records
+master.menu.administrator.create_investor = Create a investor records
 master.menu.administrator.list_commercialBanner = List commercial banner 
 master.menu.administrator.create_commercialBanner = Create commercial banner
 master.menu.administrator.list_nonCommercialBanner = List non-commercial banner 
@@ -82,7 +83,7 @@ master.menu.administrator.create_nonCommercialBanner = Create non-commercial ban
 master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
 master.menu.provider.list_solicitud = List Requests
-master.menu.provider.create_solicitud = Create Request
+master.menu.provider.create_solicitud = Create a request
 
 # master.menu.consumer ##########################################################
 

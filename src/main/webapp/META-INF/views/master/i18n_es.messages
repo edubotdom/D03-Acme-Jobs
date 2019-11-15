@@ -31,6 +31,7 @@ master.menu.selector.anonymous = Selector de Anónimo
 master.menu.selector.authenticated = Selector de Autenticado
 master.menu.selector.administrator = Selector de Administrador
 master.menu.selector.consumer = Selector de Consumer
+master.menu.selector.provider = Selector de Proveedor
 
 # master.menu.anonymous #######################################################
 
@@ -70,8 +71,8 @@ master.menu.administrator.create_challenge = Crear un reto
 master.menu.administrator.charts = Gráficas de estadísticas
 master.menu.administrator.list_companies = Listar registro de empresas
 master.menu.administrator.create_companies = Crear un registro de empresas
-master.menu.administrator.list_investor = Listar registro de Inversores
-master.menu.administrator.create_investor = Crear un registro de Inversores
+master.menu.administrator.list_investor = Listar registro de inversores
+master.menu.administrator.create_investor = Crear un registro de inversores
 master.menu.administrator.list_commercialBanner = Listar banner comercial
 master.menu.administrator.create_commercialBanner = Crear banner comercial
 master.menu.administrator.list_nonCommercialBanner = Listar banner no comercial
@@ -82,7 +83,7 @@ master.menu.administrator.create_nonCommercialBanner = Crear banner no comercial
 master.menu.provider = Proveedor
 master.menu.provider.favourite-link = Enlace favorito
 master.menu.provider.list_solicitud = Listar Solicitudes
-master.menu.provider.create_solicitud = Crear Solicitud
+master.menu.provider.create_solicitud = Crear una solicitud
 
 # master.menu.consumer ##########################################################
 
