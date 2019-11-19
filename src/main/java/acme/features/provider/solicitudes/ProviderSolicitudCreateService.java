@@ -69,7 +69,7 @@ public class ProviderSolicitudCreateService implements AbstractCreateService<Pro
 		assert entity != null;
 		assert errors != null;
 
-		boolean isDuplicated, isAcepted, isCurrencyEuro, isRewardNegative;
+		boolean isDuplicated, isAcepted, isCurrencyEuro/* , isRewardNegative */;
 
 		// BUSCA DUPLICADOS
 		// isDuplicated == true -> salta un error
@@ -87,9 +87,9 @@ public class ProviderSolicitudCreateService implements AbstractCreateService<Pro
 
 		if (entity.getDeadline() != null && !errors.hasErrors("deadline")) {
 			calendar = new GregorianCalendar();
-			calendar.add(Calendar.DAY_OF_MONTH, 10);		// debe establecerse al menos 10 días desde el momento actual
+			//calendar.add(Calendar.DAY_OF_MONTH, 10);		// debe establecerse al menos 10 días desde el momento actual
 			minimumDeadline = calendar.getTime();
-			errors.state(request, entity.getDeadline().after(minimumDeadline), "deadline", "provider.solicitud.must-be-at-least-ten-days-future-deadline");
+			errors.state(request, entity.getDeadline().after(minimumDeadline), "deadline", "provider.solicitud.must-be-future");
 		} /*
 			 * else if (entity.getDeadline() == null) {
 			 * errors.state(request, false, "deadline", "provider.solicitud.must-be-filled");

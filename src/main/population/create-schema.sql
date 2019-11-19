@@ -185,7 +185,9 @@
 create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
 create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
 create index IDX3vwg77973akwy9ilnfq707yt1 on `company` (`stars`);
+create index IDXbm7mwffwxwiukjmbmt9t1qnnu on `company` (`sector`);
 create index IDXq1q335kxox0leg1u9hhndvue1 on `investor` (`stars`);
+create index IDX1slmmcr1g0wv9jbgun6rny0oy on `investor` (`sector`);
 create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
 create index IDXcp4664f36sgqsd0ihmirt0w0 on `offer` (`ticker`);
 
