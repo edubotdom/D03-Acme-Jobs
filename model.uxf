@@ -364,10 +364,10 @@ Offer
 + ticker: String {Unique, NotBlank, Length(11, 11))}{Pattern="^O[A-Z]{4}-[0-9]{5}$"}
 + title: String {NotBlank}
 + moment: Date {Temporal(TIMESTAMP), Past}
-+ deadline: Date {Temporal(TIMESTAMP)}
++ deadline: Date {Temporal(TIMESTAMP), NotBlank}
 + text: String {NotBlank}
-+ min: Money {Valid}
-+ max: Money {Valid}</panel_attributes>
++ min: Money {Valid, NotBlank}
++ max: Money {Valid, NotBlank}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
