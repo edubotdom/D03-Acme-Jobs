@@ -37,6 +37,8 @@
 
     drop table if exists `consumer`;
 
+    drop table if exists `customization`;
+
     drop table if exists `investor`;
 
     drop table if exists `non_commercial_banner`;
@@ -48,8 +50,6 @@
     drop table if exists `shout`;
 
     drop table if exists `solicitud`;
-
-    drop table if exists `spam`;
 
     drop table if exists `user_account`;
 

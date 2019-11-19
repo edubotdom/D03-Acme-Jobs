@@ -90,6 +90,14 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `customization` (
+       `id` integer not null,
+        `version` integer not null,
+        `spam` varchar(255),
+        `threshold` double precision,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `investor` (
        `id` integer not null,
         `version` integer not null,
@@ -153,15 +161,6 @@
         `text` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
-    create table `spam` (
-       `id` integer not null,
-        `version` integer not null,
-        `lang` varchar(255),
-        `spam_threshold` double precision,
-        `spam_words` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
