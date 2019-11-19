@@ -68,7 +68,7 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert errors != null;
 
-		boolean isDuplicated, isAccepted, isInRange, isMinCurrencyEuro, isMaxCurrencyEuro, isMinNegative, isMaxNegative;
+		boolean isDuplicated, isAccepted, isInRange, isMinCurrencyEuro, isMaxCurrencyEuro/* , isMinNegative, isMaxNegative */;
 
 		// BUSCA DUPLICADOS
 		isDuplicated = this.repository.findOneByTicker(entity.getTicker()) != null;
@@ -102,9 +102,9 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		// CURRENCY -> EUR
 		if (entity.getMin() != null) {
 			isMinCurrencyEuro = entity.getMin().getCurrency().equals("EUR") || entity.getMin().getCurrency().equals("€");
-			isMinNegative = entity.getMin().getAmount().compareTo(0.) >= 0;
+			//isMinNegative = entity.getMin().getAmount().compareTo(0.) >= 0;
 			errors.state(request, isMinCurrencyEuro, "min", "consumer.offer.correct-currency");
-			errors.state(request, isMinNegative, "min", "consumer.offer.negative-reward");
+			//errors.state(request, isMinNegative, "min", "consumer.offer.negative-reward");
 		} /*
 			 * else {
 			 * errors.state(request, false, "min", "consumer.offer.must-be-filled-accordingly");
@@ -113,9 +113,9 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		if (entity.getMax() != null) {
 			// CURRENCY -> EUR
 			isMaxCurrencyEuro = entity.getMax().getCurrency().equals("EUR") || entity.getMax().getCurrency().equals("€");
-			isMaxNegative = entity.getMax().getAmount().compareTo(0.) >= 0;
+			//isMaxNegative = entity.getMax().getAmount().compareTo(0.) >= 0;
 			errors.state(request, isMaxCurrencyEuro, "max", "consumer.offer.correct-currency");
-			errors.state(request, isMaxNegative, "max", "consumer.offer.negative-reward");
+			//errors.state(request, isMaxNegative, "max", "consumer.offer.negative-reward");
 		} /*
 			 * else {
 			 * errors.state(request, false, "max", "consumer.offer.must-be-filled-accordingly");
