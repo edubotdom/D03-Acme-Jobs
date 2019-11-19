@@ -7,6 +7,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Range;
@@ -26,9 +27,11 @@ public class Company extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
-	// if Incorporated -> + "Inc", else -> + "LLC"
 	@NotBlank
 	private String				name;
+
+	@NotNull
+	private Boolean				incorporated;
 
 	@NotBlank
 	private String				sector;

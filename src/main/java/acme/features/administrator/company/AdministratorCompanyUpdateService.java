@@ -41,7 +41,7 @@ public class AdministratorCompanyUpdateService implements AbstractUpdateService<
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "name", "sector", "ceo", "activities", "url", "phone", "email", "stars");
+		request.unbind(entity, model, "name", "incorporated", "sector", "ceo", "activities", "url", "phone", "email", "stars");
 	}
 
 	@Override
@@ -66,6 +66,18 @@ public class AdministratorCompanyUpdateService implements AbstractUpdateService<
 
 	@Override
 	public void update(final Request<Company> request, final Company entity) {
+		// BUSCA QUE EL CHECKBOX SE HAYA SELECCIONADO O NO
+		Boolean isIncorporated;
+		isIncorporated = request.getModel().getBoolean("incorporated");
+		if (isIncorporated) {
+			String cadena = entity.getName();
+			cadena += " Inc";
+			entity.setName(cadena);
+		} else {
+			String cadena = entity.getName();
+			cadena += " LLC";
+			entity.setName(cadena);
+		}
 		this.repository.save(entity);
 
 	}

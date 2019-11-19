@@ -18,6 +18,7 @@
 <acme:form>
 	<!--Campos del formulario  -->
 	<acme:form-textbox code="administrator.company.form.label.name" path="name"/>
+	<acme:form-checkbox code="administrator.company.form.label.incorporated" path="incorporated"/>
 	<acme:form-textbox code="administrator.company.form.label.sector" path="sector"/>
 	<acme:form-textbox code="administrator.company.form.label.ceo" path="ceo"/>
 	<acme:form-textarea code="administrator.company.form.label.activities" path="activities"/>

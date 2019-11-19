@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.companies.Company;
 import acme.framework.components.Errors;
+import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
@@ -41,7 +42,13 @@ public class AdministratorCompanyCreateService implements AbstractCreateService<
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "name", "sector", "ceo", "activities", "url", "phone", "email", "stars");
+		request.unbind(entity, model, "name", "incorporated", "sector", "ceo", "activities", "url", "phone", "email", "stars");
+
+		if (request.isMethod(HttpMethod.GET)) {
+			model.setAttribute("incorporated", "false");
+		} else {
+			request.transfer(model, "incorporated");
+		}
 	}
 
 	@Override
@@ -62,6 +69,19 @@ public class AdministratorCompanyCreateService implements AbstractCreateService<
 
 	@Override
 	public void create(final Request<Company> request, final Company entity) {
+		// BUSCA QUE EL CHECKBOX SE HAYA SELECCIONADO O NO
+		Boolean isIncorporated;
+		isIncorporated = request.getModel().getBoolean("incorporated");
+		if (isIncorporated) {
+			String cadena = entity.getName();
+			cadena += " Inc";
+			entity.setName(cadena);
+		} else {
+			String cadena = entity.getName();
+			cadena += " LLC";
+			entity.setName(cadena);
+		}
+
 		this.repository.save(entity);
 	}
 

@@ -41,7 +41,7 @@ public class AdministratorCompanyDeleteService implements AbstractDeleteService<
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "name", "sector", "ceo", "activities", "url", "phone", "email", "stars");
+		request.unbind(entity, model, "name", "incorporated", "sector", "ceo", "activities", "url", "phone", "email", "stars");
 	}
 
 	@Override
