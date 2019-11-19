@@ -324,6 +324,7 @@ Shout
 Company
 --
 + name: String{NotBlank}
++ incorporated: Boolean{NotNull}
 + sector: String{NotBlank}
 + ceo: String{NotBlank}
 + activities: String{NotBlank}
@@ -364,10 +365,10 @@ Offer
 + ticker: String {Unique, NotBlank, Length(11, 11))}{Pattern="^O[A-Z]{4}-[0-9]{5}$"}
 + title: String {NotBlank}
 + moment: Date {Temporal(TIMESTAMP), Past}
-+ deadline: Date {Temporal(TIMESTAMP)}
++ deadline: Date {Temporal(TIMESTAMP), NotBlank}
 + text: String {NotBlank}
-+ min: Money {Valid}
-+ max: Money {Valid}</panel_attributes>
++ min: Money {Valid, NotBlank}
++ max: Money {Valid, NotBlank}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -502,14 +503,14 @@ NonCommercialBanner
       <x>609</x>
       <y>616</y>
       <w>294</w>
-      <h>77</h>
+      <h>63</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Spam
+Customization
 --
-spamWords: String{NotBlank}
-spamThreshold: Double{min=0}{max=100}{NotNull}
-lang: String{NotBlank}</panel_attributes>
+spam: String{NotBlank}
+threshold: Double{min=0}{max=100}{NotNull}
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

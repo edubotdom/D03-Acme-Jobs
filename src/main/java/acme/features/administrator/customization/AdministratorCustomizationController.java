@@ -1,5 +1,5 @@
 
-package acme.features.administrator.spam;
+package acme.features.administrator.customization;
 
 import javax.annotation.PostConstruct;
 
@@ -7,23 +7,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.spam.Spam;
+import acme.entities.customization.Customization;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Administrator;
 
 @Controller
-@RequestMapping("/administrator/spam/")
-public class AdministratorSpamController extends AbstractController<Administrator, Spam> {
+@RequestMapping("/administrator/customization/")
+public class AdministratorCustomizationController extends AbstractController<Administrator, Customization> {
 
 	@Autowired
-	private AdministratorSpamListService	listService;
+	private AdministratorCustomizationListService	listService;
 
 	@Autowired
-	private AdministratorSpamShowService	showService;
+	private AdministratorCustomizationShowService	showService;
 
 	@Autowired
-	private AdministratorSpamUpdateService	updateService;
+	private AdministratorCustomizationUpdateService	updateService;
 
 
 	@PostConstruct

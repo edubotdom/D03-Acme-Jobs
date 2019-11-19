@@ -68,7 +68,7 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert errors != null;
 
-		boolean isDuplicated, isAccepted, isInRange, isMinCurrencyEuro, isMaxCurrencyEuro, isMinNegative, isMaxNegative;
+		boolean isDuplicated, isAccepted, isInRange, isMinCurrencyEuro, isMaxCurrencyEuro/* , isMinNegative, isMaxNegative */;
 
 		// BUSCA DUPLICADOS
 		isDuplicated = this.repository.findOneByTicker(entity.getTicker()) != null;
@@ -84,13 +84,14 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 
 		if (entity.getDeadline() != null && !errors.hasErrors("deadline")) {
 			calendar = new GregorianCalendar();
-			calendar.add(Calendar.DAY_OF_MONTH, 10);		// debe establecerse al menos 10 días desde el momento actual
+			//calendar.add(Calendar.MILLISECOND, 10);
 			minimumDeadline = calendar.getTime();
-			errors.state(request, entity.getDeadline().after(minimumDeadline), "deadline", "consumer.offer.must-be-at-least-ten-days-future-deadline");
-		} else if (entity.getDeadline() == null) {
-			errors.state(request, false, "deadline", "consumer.offer.must-be-filled");
-		}
-
+			errors.state(request, entity.getDeadline().after(minimumDeadline), "deadline", "consumer.offer.must-be-future");
+		} /*
+			 * else if (entity.getDeadline() == null) {
+			 * errors.state(request, false, "deadline", "consumer.offer.must-be-filled");
+			 * }
+			 */
 		// CANTIDAD MÁXIMA DE RANGE SUPERIOR A LA INFERIOR
 		if (entity.getMin() != null && entity.getMax() != null) {
 			isInRange = entity.getMin().getAmount() <= entity.getMax().getAmount();
@@ -101,23 +102,25 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		// CURRENCY -> EUR
 		if (entity.getMin() != null) {
 			isMinCurrencyEuro = entity.getMin().getCurrency().equals("EUR") || entity.getMin().getCurrency().equals("€");
-			isMinNegative = entity.getMin().getAmount().compareTo(0.) >= 0;
+			//isMinNegative = entity.getMin().getAmount().compareTo(0.) >= 0;
 			errors.state(request, isMinCurrencyEuro, "min", "consumer.offer.correct-currency");
-			errors.state(request, isMinNegative, "min", "consumer.offer.negative-reward");
-		} else {
-			errors.state(request, false, "min", "consumer.offer.must-be-filled-accordingly");
-		}
-
+			//errors.state(request, isMinNegative, "min", "consumer.offer.negative-reward");
+		} /*
+			 * else {
+			 * errors.state(request, false, "min", "consumer.offer.must-be-filled-accordingly");
+			 * }
+			 */
 		if (entity.getMax() != null) {
 			// CURRENCY -> EUR
 			isMaxCurrencyEuro = entity.getMax().getCurrency().equals("EUR") || entity.getMax().getCurrency().equals("€");
-			isMaxNegative = entity.getMax().getAmount().compareTo(0.) >= 0;
+			//isMaxNegative = entity.getMax().getAmount().compareTo(0.) >= 0;
 			errors.state(request, isMaxCurrencyEuro, "max", "consumer.offer.correct-currency");
-			errors.state(request, isMaxNegative, "max", "consumer.offer.negative-reward");
-		} else {
-			errors.state(request, false, "max", "consumer.offer.must-be-filled-accordingly");
-		}
-
+			//errors.state(request, isMaxNegative, "max", "consumer.offer.negative-reward");
+		} /*
+			 * else {
+			 * errors.state(request, false, "max", "consumer.offer.must-be-filled-accordingly");
+			 * }
+			 */
 	}
 
 	@Override

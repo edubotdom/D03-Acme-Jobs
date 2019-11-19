@@ -73,6 +73,7 @@
         `activities` varchar(255),
         `ceo` varchar(255),
         `email` varchar(255),
+        `incorporated` bit,
         `name` varchar(255),
         `phone` varchar(255),
         `sector` varchar(255),
@@ -87,6 +88,14 @@
         `user_account_id` integer,
         `company` varchar(255),
         `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `customization` (
+       `id` integer not null,
+        `version` integer not null,
+        `spam` varchar(255),
+        `threshold` double precision,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -153,15 +162,6 @@
         `text` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
-    create table `spam` (
-       `id` integer not null,
-        `version` integer not null,
-        `lang` varchar(255),
-        `spam_threshold` double precision,
-        `spam_words` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 

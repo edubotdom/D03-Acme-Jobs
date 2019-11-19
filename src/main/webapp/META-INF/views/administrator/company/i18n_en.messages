@@ -15,6 +15,7 @@ administrator.company.list.label.url = Web Site:
 
 # FORM
 administrator.company.form.label.name = Company Name:
+administrator.company.form.label.incorporated = Incorporated
 administrator.company.form.label.sector = Sector:
 administrator.company.form.label.ceo = CEO's Name:
 administrator.company.form.label.activities = Activities:

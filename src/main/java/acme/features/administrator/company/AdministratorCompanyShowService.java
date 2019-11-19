@@ -28,7 +28,12 @@ public class AdministratorCompanyShowService implements AbstractShowService<Admi
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "name", "sector", "ceo", "activities", "url", "phone", "email", "stars");
+		request.unbind(entity, model, "incorporated", "sector", "ceo", "activities", "url", "phone", "email", "stars"); // No usamos la propiedad "name" ya que se inicializa después para especificar el tipo de empresa
+
+		String cadena = entity.getName();
+		Integer len = cadena.length();
+		String subcadena = cadena.substring(0, len - 4);
+		model.setAttribute("name", subcadena);
 	}
 
 	@Override
