@@ -1,10 +1,10 @@
 
-package acme.features.administrator.spam;
+package acme.features.administrator.customization;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.spam.Spam;
+import acme.entities.customization.Customization;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -12,21 +12,21 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AdministratorSpamUpdateService implements AbstractUpdateService<Administrator, Spam> {
+public class AdministratorCustomizationUpdateService implements AbstractUpdateService<Administrator, Customization> {
 
 	@Autowired
-	AdministratorSpamRepository repository;
+	AdministratorCustomizationRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Spam> request) {
+	public boolean authorise(final Request<Customization> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void bind(final Request<Spam> request, final Spam entity, final Errors errors) {
+	public void bind(final Request<Customization> request, final Customization entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -35,17 +35,17 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 	}
 
 	@Override
-	public void unbind(final Request<Spam> request, final Spam entity, final Model model) {
+	public void unbind(final Request<Customization> request, final Customization entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "spamWords", "spamThreshold", "lang");
+		request.unbind(entity, model, "spam", "threshold");
 	}
 
 	@Override
-	public Spam findOne(final Request<Spam> request) {
+	public Customization findOne(final Request<Customization> request) {
 		assert request != null;
-		Spam result;
+		Customization result;
 		int id;
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneById(id);
@@ -53,7 +53,7 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 	}
 
 	@Override
-	public void validate(final Request<Spam> request, final Spam entity, final Errors errors) {
+	public void validate(final Request<Customization> request, final Customization entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -61,7 +61,7 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 	}
 
 	@Override
-	public void update(final Request<Spam> request, final Spam entity) {
+	public void update(final Request<Customization> request, final Customization entity) {
 		assert request != null;
 		assert entity != null;
 

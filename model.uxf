@@ -502,14 +502,14 @@ NonCommercialBanner
       <x>696</x>
       <y>704</y>
       <w>336</w>
-      <h>88</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Spam
+Customization
 --
-spamWords: String{NotBlank}
-spamThreshold: Double{min=0}{max=100}{NotNull}
-lang: String{NotBlank}</panel_attributes>
+spam: String{NotBlank}
+threshold: Double{min=0}{max=100}{NotNull}
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
