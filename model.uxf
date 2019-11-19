@@ -385,9 +385,9 @@ Solicitud
 + ticker: String {Unique, NotBlank, Length(11, 11))}{Pattern="^O[A-Z]{4}-[0-9]{5}$"}
 + title:String {NotBlank}
 + moment: Date {Temporal(TIMESTAMP), Past}
-+ deadline: Date {Temporal(TIMESTAMP)}
++ deadline: Date {NotNull,Temporal(TIMESTAMP)}
 + text: String {NotBlank}
-+ reward: Money {Valid}</panel_attributes>
++ reward: Money {NotNull,Valid}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
