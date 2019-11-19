@@ -90,19 +90,23 @@ public class ProviderSolicitudCreateService implements AbstractCreateService<Pro
 			calendar.add(Calendar.DAY_OF_MONTH, 10);		// debe establecerse al menos 10 días desde el momento actual
 			minimumDeadline = calendar.getTime();
 			errors.state(request, entity.getDeadline().after(minimumDeadline), "deadline", "provider.solicitud.must-be-at-least-ten-days-future-deadline");
-		} else if (entity.getDeadline() == null) {
-			errors.state(request, false, "deadline", "provider.solicitud.must-be-filled");
-		}
+		} /*
+			 * else if (entity.getDeadline() == null) {
+			 * errors.state(request, false, "deadline", "provider.solicitud.must-be-filled");
+			 * }
+			 */
 
 		// CURRENCY -> EUR
 		if (entity.getReward() != null) {
 			isCurrencyEuro = entity.getReward().getCurrency().equals("EUR") || entity.getReward().getCurrency().equals("€");
-			isRewardNegative = entity.getReward().getAmount().compareTo(0.) >= 0;
+			//isRewardNegative = entity.getReward().getAmount().compareTo(0.) >= 0;
 			errors.state(request, isCurrencyEuro, "reward", "provider.solicitud.correct-currency");
-			errors.state(request, isRewardNegative, "reward", "provider.solicitud.negative-reward");
-		} else {
-			errors.state(request, false, "reward", "provider.solicitud.must-be-filled-accordingly");
-		}
+			//errors.state(request, isRewardNegative, "reward", "provider.solicitud.negative-reward");
+		} /*
+			 * else {
+			 * errors.state(request, false, "reward", "provider.solicitud.must-be-filled-accordingly");
+			 * }
+			 */
 
 	}
 
